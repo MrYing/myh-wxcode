@@ -1,5 +1,4 @@
 @import "../../comn/animation.wxss";
-
 .film {
   box-sizing: border-box;
   width: 750rpx;

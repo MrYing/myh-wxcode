@@ -8,7 +8,7 @@
         </view>
          <view class="form-item">
             <view class="form-item-bd">
-            <image class="icon" src="../../image/icon_pwd.png" style="width:42rpx;height:53rpx;"></image>
+            <image class="icon" src="../../image/icon_pwd.png" style="width:40rpx;height:53rpx;"></image>
                 <input type="text" password="true" class="input" name="password" value="" bindinput="pwdInput" placeholder="请输入密码"/>
             </view>
         </view>

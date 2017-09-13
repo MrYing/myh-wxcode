@@ -17,14 +17,14 @@
   <view class="bg-line"></view>
     <view class="summary">
       <view class="lable-line">
-        <text class="til">简介:</text>
+        <text class="til">简介</text>
       </view>
       <view class="summary-text">{{summary}}</view>
     </view>
     <view class="bg-line"></view>
     <view class="goodAt">
       <view class="lable-line">
-        <text class="til">评价:</text>
+        <text class="til">评价</text>
       </view>
       <block wx:if="{{showLoading}}">
         <view class="loading">努力加载中...</view>

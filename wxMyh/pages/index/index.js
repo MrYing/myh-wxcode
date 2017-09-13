@@ -27,7 +27,7 @@ Page({
     var bannerHei = 0;
     wx.getSystemInfo({
       success: function (res) {
-        bannerHei = res.windowWidth / 10 * 7 + "px";
+        bannerHei = res.windowWidth / 2 + "px";
       }
     })
     //获取首页数据
@@ -54,7 +54,7 @@ Page({
     var bannerHei = 0;
     wx.getSystemInfo({
       success: function (res) {
-        bannerHei = res.windowWidth / 10 * 7 + "px";
+        bannerHei = res.windowWidth / 2 + "px";
       }
     })
     //获取首页数据

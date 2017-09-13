@@ -9,7 +9,14 @@
     <view class="form-item">
       <view class="form-item-bd">
         <image class="icon" src="../../image/icon_code.png"></image>
-        <input type="text" name="code" bindinput="checkCode" value="{{code}}" placeholder="验证码" maxlength="6" style="width:55%;padding-left:32rpx;" />
+        <input type="text" class="input" name="captcha"  value="{{captcha}}" bindinput="captchaInput" placeholder="图形验证码" maxlength="4" />
+        <image class="img_code" src="{{imgcode}}" bindtap="changeImgCode"></image>
+      </view>
+    </view>
+    <view class="form-item">
+      <view class="form-item-bd">
+        <image class="icon" src="../../image/icon_code.png"></image>
+        <input type="text" name="code" bindinput="checkCode" value="{{code}}" placeholder="验证码" maxlength="6" style="width:55%;" />
       </view>
     </view>
     <button bindtap="getCode" class="code_btn" disabled="{{disabled}}">{{btnText}}</button>

@@ -5,14 +5,14 @@
 }
 
 .info {
-  text-align: justify;
+  text-align: center;
   color: #999;
   margin: 10rpx 0 30rpx;
   font-size: 28rpx;
 }
 .medicalName {
   color: #000;
-  text-align: justify;
+  text-align: center;
   margin: 30rpx 0 20rpx;
   font-size: 35rpx;
   font-weight: bold;

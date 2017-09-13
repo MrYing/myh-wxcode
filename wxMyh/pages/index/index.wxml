@@ -12,19 +12,19 @@
   <view class="big-logo">
     <block>
       <view bindtap="toMedical" class="logoinfo">
-        <image src="../../image/index/icon_01.png" />
+        <image src="../../image/index/icon_med.png" />
         <text class="logotext">药品中心</text>
       </view>
     </block>
     <block>
       <view bindtap="toServer" class="logoinfo">
-        <image src="../../image/index/icon_4.png" />
+        <image src="../../image/index/icon_server.png" />
         <text class="logotext">检测服务</text>
       </view>
     </block>
     <block>
       <view bindtap="toVaccinum" class="logoinfo">
-        <image src="../../image/index/icon_5.png" />
+        <image src="../../image/index/icon_vac.png" />
         <text class="logotext">疫苗接种</text>
       </view>
     </block>
@@ -42,7 +42,7 @@
         </view>
       </block>
     </scroll-view>
-    <view bindtap="toNews" class="lable-line">最新资讯<image class="btn-more" src="../../image/index/btn_more.png"></image></view>
+     <view bindtap="toNews" class="lable-line">最新资讯<image class="btn-more" src="../../image/index/btn_more.png"></image></view>
     <scroll-view scroll-y style="height: 100%;" scroll-top="300">
       <view wx:for="{{news}}" class="wa-item wa-item-thumbnail-left" data-id="{{item.nid}}" bindtap="toNewsDetail">
         <text class="icon-right ion-chevron-right"></text>
@@ -50,6 +50,6 @@
         <view class="medical-name min-h"> {{item.title}}</view>
         <view class="medical-outline"><text class="news-tag">{{item.tag}}</text><text class="news-info">{{item.author}}<text class="info-time">{{item.createTime}}</text></text></view>
       </view>
-    </scroll-view>
+    </scroll-view> 
   </view>
 </view>

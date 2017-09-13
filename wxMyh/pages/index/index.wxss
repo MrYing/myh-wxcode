@@ -81,7 +81,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 16rpx 0;
+  margin: 20rpx 0;
   padding: 33rpx 0 30rpx;
   background-color: #fff;
 }
@@ -133,12 +133,12 @@
 .page-column {
   display: flex;
   flex-direction: column;
-  padding: 20rpx 30rpx 10rpx;
+  padding: 15rpx 30rpx 5rpx;
 }
 
 .doctors-scroll-x {
   width: 100%;
-  margin-top: 20rpx;
+  margin-top: 40rpx;
   white-space: nowrap;
 }
 

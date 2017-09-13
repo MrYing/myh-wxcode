@@ -9,6 +9,7 @@ const user = {
     util.mypost('api/login', pdata, success, error, "POST")
   }, sendCode: function (pdata, success, error) {
     pdata.token = TOKEN;
+    console.log("padat====" + JSON.stringify(pdata))
     util.mypost('api/sendIdentifyCode', pdata, success, error,'POST')
   }, checkCode: function (pdata, success, error) {
     pdata.token = TOKEN;

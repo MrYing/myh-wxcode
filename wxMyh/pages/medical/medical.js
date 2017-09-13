@@ -16,7 +16,6 @@ Page({
     api.medical.getMedical(pdata, function (data) {
       var leftData = data.data.data.category;
       // leftData = leftData.unshift({ "cid": "0", "cateName": "全部癌种" })
-      console.log("lef----"+JSON.stringify(leftData));
       that.setData({
         navRightItems: data.data.data.medicine,
         navLeftItems: leftData
@@ -27,7 +26,6 @@ Page({
   switchRightTab: function (e) {
     let cid = e.target.dataset.id,
       index = parseInt(e.target.dataset.index);
-    console.log("cid==" + cid);
     this.setData({
       curNav: cid,
       curIndex: index

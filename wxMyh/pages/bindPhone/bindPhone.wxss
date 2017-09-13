@@ -116,8 +116,7 @@ button::after {
 }
 
 .input {
-  width: 93%;
-  float: right;
+  width: 60%;
   position: relative;
 }
 
@@ -128,4 +127,14 @@ button {
 button[disabled][type="default"], wx-button[disabled]:not([type]) {
   color: rgba(0, 0, 0, 0.3);
   background-color: #eee;
+}
+
+
+.img_code{
+width:223rpx;
+float:right;
+bottom:75rpx;
+right:-40rpx;
+height:90rpx;
+position:relative;
 }

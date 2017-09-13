@@ -14,8 +14,7 @@ Page({
     docLevel:'',
     hospitalName:'',
     officeName:'',
-    answerNum:0,
-    summary:'0',
+    summary:'',
     goodAt:'暂无介绍',
     imgServer: 'https://img.du-ms.com/',
     docId: 1,
@@ -44,7 +43,6 @@ Page({
         officeName: data.data.data.doctor[0].officeName,
         summary: data.data.data.doctor[0].summary || '暂无介绍',
         goodAt: data.data.data.doctor[0].goodAt ||'暂无介绍',
-        answerNum: data.data.data.doctor[0].answerNum,
         evaluate: arrEvaluate,
         hasMore: hasMore,
         showLoading: false

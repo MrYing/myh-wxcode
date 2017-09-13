@@ -60,12 +60,12 @@ Page({
     }
   },
   changeGender: function (e) {
-    console.log(e)
     var genderIndex = e.detail.value
+    console.log("console.log(genderIndex)=======" + genderIndex);
     if (genderIndex != "null") {
       that.setData({
-        sex: genderIndex,
-        gender: this.data.genderArray[this.data.sex]
+        sex: Number(genderIndex) + 1,
+        gender: this.data.genderArray[genderIndex]
       })
     }
   },

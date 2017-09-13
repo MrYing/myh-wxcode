@@ -1,19 +1,20 @@
 var util = require('../../utils/util')
 const api = require('../../utils/api.js');
-var that = null, mobile = null, code = null, disabled = true, sub_disabled = true, wait = null, openId = null;
+var that = null, mobile = null, code = null, disabled = true, sub_disabled = true, wait = null, openId = null, captcha= null;
 Page({
   data: {
     disabled: disabled,
     sub_disabled: sub_disabled,
-    btnText: "获取验证码"
+    btnText: "获取验证码",
+    imgcode:'../../image/default-news.png',
+    captcha:''
   }, onLoad: function (option) {
     that = this;
     openId = option.openId;
-    console.log("openId============================="+JSON.stringify(openId));
   },
   getCode: function () {
     //发送验证码
-    api.user.sendCode({ mobile: mobile }, function (data) {
+    api.user.sendCode({ mobile: mobile, captcha: captcha }, function (data) {
       if (data.data.code.result == 0 && data.data.msg == '请求成功'){
         wait = 60;
         that.time();
@@ -44,21 +45,24 @@ Page({
       }, 1000)
     }
   }, telInput: function (e) {
-    console.log("mobile===" + e.detail.value);
     mobile = e.detail.value;
     if (mobile && that.checkPhone(mobile)) {
       disabled = false;
+      that.setData({
+        imgcode: 'https://api.du-ms.com/verify/get_code?mobile=' + mobile +'&random=' + Math.random(1, 1000) * 1000 + ''
+      })
     } else {
       disabled = true;
     }
     that.setData({
       disabled: disabled
     })
+  },captchaInput:function(e){
+    captcha = e.detail.value;
   }, checkPhone: function (phone) {
     var pReg = /^1[0-9]{10}$/;
     return pReg.test(phone);
   }, checkCode: function (e) {
-    console.log("code===" + e.detail.value);
     code = e.detail.value;
     if (code && code.length == 6) {
       api.user.checkCode({ mobile: mobile, code: code }, function (data) {
@@ -100,5 +104,9 @@ Page({
         },300)
       }
     });
+  }, changeImgCode:function(){
+      that.setData({
+        imgcode: 'https://api.du-ms.com/verify/get_code?mobile=' + mobile+'&random=' + Math.random(1,1000)*1000+''
+      })
   }
 })

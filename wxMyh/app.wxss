@@ -1,5 +1,6 @@
 /**app.wxss**/
 @import 'wa-ui.wxss';
+@import "component/message/message.wxss";
 .container {
   height: 100%;
   display: flex;

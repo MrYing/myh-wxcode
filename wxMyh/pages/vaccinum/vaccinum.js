@@ -18,7 +18,6 @@ Page({
       dataList = data.data.data.vaccinumList;
       len = dataList && dataList.length;
       hasMore = len < limit ? false : true;
-      console.log("dataList========" + JSON.stringify(dataList));
       page++;
       that.setData({
         geneList: dataList,

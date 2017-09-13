@@ -24,7 +24,6 @@ Page({
               cases = data.data.data[0];
               len = cases && cases.length;
               hasMore = len < limit ? false : true;
-              console.log("cases========" + JSON.stringify(cases));
               page++;
               that.setData({
                 resData: cases,
