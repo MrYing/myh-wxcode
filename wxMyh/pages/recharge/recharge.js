@@ -40,14 +40,11 @@ Page({
                     url: wxPayUrl || '',
                     success: function (res) {
                       // var data = JSON.parse(res.data);
-                      console.log("wxpaydata=====================" + res.data);
-                      console.log("res.data==========" + JSON.stringify(res.data));
                       var timeStamp = res.data.timeStamp;
                       var nonceStr = res.data.nonceStr;
                       var appId = res.data.appId;
                       var prepay_id = res.data.package;
                       var sign = res.data.sign;
-                      console.log("prepay_id==========" + prepay_id);
                       wx.requestPayment({
                         'appId': appId,
                         'timeStamp': timeStamp+'',
@@ -56,7 +53,6 @@ Page({
                         'signType': 'MD5',
                         'paySign': sign,
                         'success': function (res) {
-                          console.log("success res========" + JSON.stringify(res))
                           util.showToast('充值成功');
                           setTimeout(function(){
                             wx.redirectTo({

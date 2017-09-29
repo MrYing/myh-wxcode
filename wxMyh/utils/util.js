@@ -66,6 +66,19 @@ function goLogin(showFlag,showinfo){
   }, 1500)
 }
 
+
+//去登陆,并关闭当前页面
+function redireToLogin(showFlag, showinfo) {
+  if (showFlag) {
+    showToast(showinfo || '身份过期,请重新登录');
+  }
+  setTimeout(function () {
+    wx.redirectTo({
+      url: '../login/login',
+    })
+  }, 1500)
+}
+
 //检查金额数字
 function checkMoney(num) {
   var pReg = /^(([1-9]\d{0,9})|0)(\.\d{1,2})?$/;
@@ -138,5 +151,6 @@ module.exports = {
   isNull: isNull,
   checkMoney: checkMoney,
   goLogin: goLogin,
-  isPwd: isPwd
+  isPwd: isPwd,
+  redireToLogin: redireToLogin
 }

@@ -49,6 +49,7 @@ Page({
                   api.user.getOpenId({ appid: APPID, secret: SECRET, js_code: res.code }, function (data) {
                     if (data.data.code == 0) {
                       openid = data.data.data.data.openid;
+                      console.log("openid===============" + openid);
                       api.user.checkBind(openid, function (data) {
                         if (data.data.code == 5) {
                           wx.redirectTo({

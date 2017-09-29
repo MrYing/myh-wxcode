@@ -9,7 +9,7 @@
         <image class="item-img" src="{{imgServer + item.img}}"></image>
         <view class="hospital-name"> {{item.hospitalName}}</view>
         <view class="hospital-address">
-        <image class="address-icon" src="../../image/icon_add.png"></image> {{item.address}}</view>
+          <image class="address-icon" src="../../image/icon_add.png"></image> {{item.address}}</view>
       </view>
       <block wx:if="{{hasMore}}">
         <view class="loading-tip">上拉加载更多</view>

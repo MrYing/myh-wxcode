@@ -23,7 +23,6 @@ Page({
           api.order.order({ "offset": 0, "limit": limit, privateToken: privateToken }, function (data) {
             if (data.data.code == 0) {
               order = data.data.data.order;
-              
               len = order && order.length;
               hasMore = len < limit ? false : true;
               for (var i = 0; i < order.length; i++) {
@@ -59,10 +58,10 @@ Page({
             })
           });
         } else {
-          util.goLogin(true, "请重新登录");
+          util.redireToLogin(true, "请重新登录");
         }
       }, fail: function () {
-        util.goLogin(true, "请重新登录");
+        util.redireToLogin(true, "请重新登录");
       }
     })
   },

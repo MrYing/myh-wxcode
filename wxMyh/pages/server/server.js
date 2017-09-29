@@ -17,7 +17,6 @@ Page({
       vgeneList = data.data.data.GeneList;
       len = vgeneList && vgeneList.length;
       hasMore = len < limit?false:true;
-      console.log("vgeneList========" + JSON.stringify(vgeneList));
       page++;
       that.setData({
         geneList: vgeneList,

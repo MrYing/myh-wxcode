@@ -40,7 +40,6 @@ Page({
       success: function (res) {
         privateToken = res.data;
         pdata.privateToken = privateToken;
-        console.log("res==========" + JSON.stringify(res));
         if (res.data && res.data.length > 0) {
           api.reg_num.regNumView(pdata, function (data) {
             if (data.data.code == 500 || data.data.msg == '未登录') {
@@ -57,7 +56,6 @@ Page({
                 picker_arr.push(e.illName);
                 id_arr.push(e.illId);
               })
-              console.log("data=======" + JSON.stringify(picker_arr));
               that.setData({
                 illnessSelect: illnessSelect,
                 picker_arr: picker_arr,
@@ -154,7 +152,6 @@ Page({
     var appointTimeOfTime = e.detail.value
 
     if (appointTimeOfTime != "null") {
-      console.log("appointTimeOfTime===" + appointTimeOfTime);
       this.setData({
         appointTimeOfTime: e.detail.value
       })
@@ -162,7 +159,6 @@ Page({
   },
   changeIllId: function (e) {
     var illId = that.data.id_arr[e.detail.value.selector]
-    console.log("illid===========" + illId);
     that.setData({
       index: e.detail.value,
       illId: that.data.id_arr[e.detail.value.selector]

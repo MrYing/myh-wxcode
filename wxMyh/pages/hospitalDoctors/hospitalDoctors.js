@@ -25,7 +25,6 @@ Page({
       arrDoctors = data.data.data.doctors;
       len = arrDoctors && arrDoctors.length;
       hasMore = len < limit ? false : true;
-      console.log("arrDoctors========" + JSON.stringify(arrDoctors));
       page++;
       that.setData({
         resData: arrDoctors,
